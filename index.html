@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/52745ab955.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee Practice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); </style>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item-qr header__navbar-item--separate">
+                            Vào cửa hàng trên ứng dụng F8-Shop
+
+                            <!-- Header QR Code -->
+                            <div class="header__QR">
+                                <img src="./assets/img/QR_code.png" alt="QR Code" class="header__qr-img">
+                                <div class="header__qr-apps">
+                                    <img src="./assets/img/ggPlayIcon.png" alt="" class="ggplay-icon header__qr-dowload-img">
+                                    <img src="./assets/img/AppStoreICon.png" alt="" class="appstore-icon header__qr-dowload-img">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <span style="cursor: text; color: white">Kết nối</span>
+                        </li>
+                        <a href="" class="header__navbar-icon-link">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="" class="header__navbar-icon-link">
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+                    </ul>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item-has-notify">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="header__navbar-icon-link fa-regular fa-bell"></i>
+                                Thông Báo
+                            </a>
+                            <div class="header__notify">
+                                <header class="header__notify-header">
+                                    <h3>Thông báo mới nhận</h3>
+                                </header>
+                                <ul class="header__notify-list">
+                                    <li class="header__notify-item">
+                                        <a href="" class="header__notify-link">
+                                            <img src="./assets/img/Ohui.png" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Xác thực chính xác nguồn gốc các sản phẩm Ohui</span>
+                                                <span class="header__notify-des">Xác thực chính xác nguồn gốc các sản phẩm Ohui</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item">
+                                        <a href="" class="header__notify-link">
+                                            <img src="./assets/img/Ohui.png" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Xác thực chính xác nguồn gốc các sản phẩm Ohui</span>
+                                                <span class="header__notify-des">Xác thực chính xác nguồn gốc các sản phẩm Ohui</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item">
+                                        <a href="" class="header__notify-link">
+                                            <img src="./assets/img/Ohui.png" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Xác thực chính xác nguồn gốc các sản phẩm Ohui</span>
+                                                <span class="header__notify-des">Xác thực chính xác nguồn gốc các sản phẩm Ohui</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="header__notify-all">
+                                    <a href="" class="header__notify-footer-btn">Xem tất cả</a>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <i class=".header__navbar-icon-link fa-regular fa-circle-question"></i>
+                                Trợ giúp
+                            </a>
+                        </li>
+                        <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">Đăng ký</li>
+                        <li class="header__navbar-item header__navbar-item--strong">Đăng Nhập</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+
+        </div>
+        <footer class="footer">
+
+        </footer>
+    </div>
+
+    <!-- Modal Layout    -->
+    <div class="modal">
+        <div class="modal__overlay">
+
+        </div>
+
+        <div class="modal__body">
+            <div class="modal__inner">
+
+                <!-- Authen form -->
+                <div class="auth-form"> 
+                    <div class="auth-form-sign-in">
+                        <div class="auth-form__container">
+                            <div class="auth-form__heading">
+                                <h3>Đăng ký</h3>
+                                <span class="auth-form__switch-btn">Đăng nhập</span>
+                            </div>
+                            
+                            <div class="auth-form__form">
+                                <div class="auth-form__group">
+                                    <input placeholder="Email" type="Text" class="auth-form__input">
+                                </div>
+                                <div class="auth-form__group">
+                                    <input placeholder="Mật khẩu" type="password" class="auth-form__input">
+                                </div>
+                                <div class="auth-form__group">
+                                    <input placeholder="Nhập lại mật khẩu" type="password" class="auth-form__input">
+                                </div>
+                            </div>
+                            <div class="auth-form__aside">
+                                <p class="auth-form__policy-text">
+                                    Bằng việc đăng ký, bạn đã đồng ý với Shopee về 
+                                    <a href="" class="auth-form__policy-link">Điều khoản dịch vụ</a> &
+                                    <a href="" class="auth-form__policy-link">Chính sách bảo mật</a>
+                                </p>
+                            </div>
+                            <div class="auth-form__controls">
+                                <button class="btn btn--normal">TRỞ LẠI</button>
+                                <button class="btn btn--primary auth-form__controls-sign-in">ĐĂNG KÝ</button>
+                            </div>
+                        </div>
+                        <div class="auth-form__social">
+                            <a href="" class="auth-form__social-facebook btn btn--with-icon btn--size-s">
+                                <i class="fa-brands fa-square-facebook"></i>
+                                <span class="auth-form__social-text">Kết nối với Facebook</span>
+                            </a>
+                            <a href="" class="auth-form__social-google btn btn--with-icon btn--size-s">
+                                <i class="fa-brands fa-google"></i>
+                                <span class="auth-form__social-text">Kết nối với Google</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="auth-form-sign-up">
+                        <div class="auth-form__container">
+                            <div class="auth-form__heading">
+                                <h3>Đăng nhập</h3>
+                                <span class="auth-form__switch-btn">Đăng ký</span>
+                            </div>
+                            
+                            <div class="auth-form__form">
+                                <div class="auth-form__group">
+                                    <input placeholder="Email/Số Điện Thoại/Tên Đăng Nhập" type="Text" class="auth-form__input">
+                                </div>
+                                <div class="auth-form__group">
+                                    <input placeholder="Mật khẩu" type="password" class="auth-form__input">
+                                </div>
+                                
+                            </div>
+                            <div class="auth-form__aside">
+                                <a href="" class="auth-form__policy-fogot">Quên Mật Khẩu</a> 
+                                <a href="" class="auth-form__policy-help">Cần Trợ giúp?</a>
+                            </div>
+                            <div class="auth-form__controls">
+                                <button class="btn btn--normal">TRỞ LẠI</button>
+                                <button class="btn btn--primary auth-form__controls-sign-in">ĐĂNG NHẬP</button>
+                            </div>
+                        </div>
+                        <div class="auth-form__social">
+                            <a href="" class="auth-form__social-sms btn btn--with-icon btn--size-s">
+                                <i class="fa-regular fa-comment-dots"></i>
+                                <span class="auth-form__social-text">SMS</span>
+                            </a>
+                            <a href="" class="auth-form__social-facebook btn btn--with-icon btn--size-s">
+                                <i class="fa-brands fa-square-facebook"></i>
+                                <span class="auth-form__social-text">Kết nối với Facebook</span>
+                            </a>
+                            <a href="" class="auth-form__social-google btn btn--with-icon btn--size-s">
+                                <i class="fa-brands fa-google"></i>
+                                <span class="auth-form__social-text">Kết nối với Google</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

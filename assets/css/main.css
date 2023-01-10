@@ -1,0 +1,484 @@
+.header{
+    height: 120px;
+    background-image: linear-gradient(0,#fe6433,#f53f2d);
+}
+
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar-list{
+    padding-left: 0;
+    list-style-type: none;
+    text-decoration: none;
+    margin-top: 8px
+    ;
+}
+
+.header__navbar-item{
+    display: inline-block;
+    position: relative;
+    margin:  0 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.header__navbar-item-has-notify:hover .header__notify{
+    display: block;
+}
+
+.header__navbar-list i{
+    font-size: 18px;
+    color: var(--white-color);
+    margin: 0 3px;
+}
+
+.header__navbar-list i:hover{
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.header__navbar-item,
+.header__navbar-item-link{
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 300;
+
+}
+
+.header__navbar-item,
+.header__navbar-item-link,
+.header__navbar-icon-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+
+.header__navbar-item:hover,
+.header__navbar-item-link:hover
+{
+    color: rgba(255,255, 255, 0.7);
+    cursor: pointer;
+}
+
+.header__navbar-item--strong{
+    font-weight: 500;
+}
+
+.header__navbar-item--separate::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid #fb9086;
+    height: 12px;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Header QR Code */
+
+.header__navbar-item-qr:hover .header__QR{
+    display: block;
+
+}
+.header__QR{
+    background-color: var(--white-color);
+    width: 85%;
+    position: absolute;
+    left: 0;
+    top: 130%;
+    border-radius: 2px;
+    display: none;
+    animation: fadeIn ease-in .3s;
+}
+
+.header__QR::before{
+    content: "";
+    left: 0;
+    top: -10px;
+    display: block;
+    height: 20px;
+    position: absolute;
+    width: 100%;
+}
+
+.header__qr-img{
+    
+}
+
+.header__qr-apps{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__qr-dowload-img{
+    height: 18px;
+}
+
+.ggplay-icon{
+    margin-left: 12px;
+}
+.appstore-icon{
+    margin-right: 8px;
+}
+
+/* Navbar Notification */
+.header__notify{
+    position: absolute;
+    top: 150%;
+    right: 0;
+    width: 404px;
+    background-color: var(--white-color);
+    border: 1px solid #d3d3d3;
+    transform-origin: 90% top ;
+    animation: headerGrowth ease-in 0.25s;
+    display: none;
+    will-change: opacity, transform;
+}
+
+.header__notify::before{
+    content: "";
+    border-width: 10px 12px;
+    border-style:solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 12px;
+    top: -20px;
+}
+
+@keyframes headerGrowth {
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__notify-header{
+    height: 40px;
+    background-color: var(--white-color);
+    cursor: default;
+} 
+
+.header__notify-header h3{
+    color: #666;
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 400;
+    line-height: 40px;
+    margin: 0 12px;
+}
+.header__notify-list{
+    padding-left: 0;
+} 
+.header__notify-item{
+    background-color: rgba(247,72,46,0.05);
+} 
+
+.header__notify-item:hover{
+    background-color: var(--white-color);
+}
+.header__notify-link{
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+} 
+.header__notify-img{
+    max-width: 48px;
+    object-fit: contain;
+} 
+.header__notify-info{
+    margin-left: 12px;
+    
+} 
+.header__notify-name{
+    display: block;
+    font-size: 1.4rem;
+    color: var(--black-color);
+    font-weight: 600;
+} 
+.header__notify-des{
+    padding-top: 5px;
+    display: block;
+    font-size: 1.2rem;
+    color: #756f6e;
+}
+
+.header__notify-all,
+.header__notify-footer-btn{
+    height: 35px;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 35px;
+    color: var(--black-color);
+}
+
+.header__notify-all:hover{
+    background-color: rgb(237, 236, 236);
+}
+
+.header__notify-footer-btn{
+    padding: 0 150px;
+    width: 100%;
+    font-weight: 590;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* Authen Modal */
+/* Sign in */
+.auth-form-sign-in{
+    display: none;
+}
+
+.auth-form{
+    width: 500px;
+}
+.auth-form__container{
+    padding: 16px 32px;
+}
+
+.auth-form__heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-form__heading h3{
+    font-size: 2rem;
+    color: var(--black-color);
+}
+.auth-form__switch-btn{
+    font-size: 1.4rem;
+    color: #f53f2d;
+    font-weight: 700;
+    cursor: pointer;
+}
+.auth-form__form{
+    
+}
+
+.auth-form__input{
+    font-size: 1.4rem;
+    height: 40px;
+    width: 100%;
+    margin-top: 16px;
+    padding: 0 8px;
+    outline: none;
+}
+
+.auth-form__input:focus{
+    border-color: #777;
+}
+
+.auth-form__aside{
+    margin: 20px;
+}
+
+.auth-form__policy-text{
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.auth-form__policy-link{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.auth-form__controls{
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__controls-sign-in{
+    margin-left: 16px;
+}
+
+.auth-form__controls .btn{
+    border: none;
+}
+
+.auth-form__social{
+    background-color: #f5f5f5;
+    padding: 12px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn--with-icon{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    /* min-width: 210px; */
+}
+.btn--with-icon i{
+    /* padding-right: 12px; */
+    font-size: 1.6rem;
+}
+.btn--size-s{
+    height: 32px;
+    font-size: 1.2rem;
+}
+.auth-form__social-facebook{
+    background-color: #3a5a98;
+    color: var(--white-color);
+}
+.auth-form__social-facebook i{
+    color: var(--white-color);
+}
+.auth-form__social-text{
+    margin: 0 36px;
+    font-weight: 500;
+}
+
+/* Sign up */
+.auth-form-sign-up{
+    /* display: none; */
+}
+
+.auth-form{
+    width: 500px;
+}
+.auth-form__container{
+    padding: 16px 32px;
+}
+
+.auth-form__heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-form__heading h3{
+    font-size: 2rem;
+    color: var(--black-color);
+}
+.auth-form__switch-btn{
+    font-size: 1.4rem;
+    color: #f53f2d;
+    font-weight: 700;
+    cursor: pointer;
+}
+.auth-form__form{
+    
+}
+
+.auth-form__input{
+    font-size: 1.4rem;
+    height: 40px;
+    width: 100%;
+    margin-top: 16px;
+    padding: 0 8px;
+    outline: none;
+}
+
+.auth-form__input:focus{
+    border-color: #777;
+}
+
+.auth-form__aside{
+    margin: 20px;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__policy-fogot,
+.auth-form__policy-help{
+    text-decoration: none;
+}
+
+.auth-form__policy-fogot{
+    padding-right: 8px;
+    color: var(--primary-color);
+    font-weight: 600;
+    border-right: 1px solid rgba(0,0, 0, 0.1);
+}
+.auth-form__policy-help{
+    padding-left: 8px;
+
+    color: #777;
+}
+
+.auth-form__policy-text{
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.auth-form__policy-link{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.auth-form__controls{
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__controls-sign-in{
+    margin-left: 16px;
+}
+
+.auth-form__controls .btn{
+    border: none;
+}
+
+.auth-form__social{
+    background-color: #f5f5f5;
+    padding: 12px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn--with-icon{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    /* min-width: 210px; */
+}
+.btn--with-icon i{
+    /* padding-right: 12px; */
+    font-size: 1.6rem;
+}
+.btn--size-s{
+    height: 32px;
+    font-size: 1.2rem;
+}
+.auth-form__social-facebook{
+    background-color: #3a5a98;
+    color: var(--white-color);
+}
+.auth-form__social-facebook i{
+    color: var(--white-color);
+}
+.auth-form__social-text{
+    margin: 0 36px;
+    font-weight: 500;
+}
+
+
