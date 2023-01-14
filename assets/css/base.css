@@ -1,12 +1,16 @@
-:root{
+:root {
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
     --primary-color: #ee4d2d;
     --border-color: #dbdbdb;
+
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-search-height: calc(var(--header-height) - var( --navbar-height)-8px);
 }
 
-*{
+* {
     box-sizing: inherit;
 
 }
@@ -28,22 +32,23 @@ html {
     width: 100%;
 }
 
-.grid__row{
+.grid__row {
     display: flex;
     flex-wrap: wrap;
 }
 
 /* Modal */
-.modal{
+.modal {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     display: flex;
+    display: none;
 }
 
-.modal__overlay{
+.modal__overlay {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -51,16 +56,17 @@ html {
     z-index: 2;
 }
 
-.modal__body{
+.modal__body {
     width: 500px;
     background-color: var(--white-color);
-    margin:  auto;
+    margin: auto;
     z-index: 3;
     border-radius: 5px;
 }
+
 /* BUTTON */
-.btn{
-    line-height: 36px;
+.btn {
+    /* line-height: 36px; */
     font-weight: 400;
     font-size: 1.45rem;
     background-color: var(--white-color);
@@ -72,16 +78,17 @@ html {
     color: var(--black-color);
 }
 
-.btn.btn--normal:hover{
+.btn.btn--normal:hover {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.03);
 }
-.btn.btn--primary{
+
+.btn.btn--primary {
     background-color: var(--primary-color);
     color: var(--white-color);
 }
 
-.btn--disable{
+.btn--disable {
     cursor: default;
     background-color: #999;
     color: #333;
